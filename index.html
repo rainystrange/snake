@@ -1,0 +1,75 @@
+<!DOCTYPE html> 		
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Snake Game</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="gameTitle">Snake Game</div>
+		<div class="author">Built by <span>Dat Nguyen</span></div>
+	</header>
+	
+	<div class="container">
+		<div class="side">
+			<div class="highScores">
+				<div class="highScoresTitle">High Scores:</div>
+				<div class="highScoresData"><p>1.</p>
+					<p>2.</p>
+					<p>3.</p>
+					<p>4.</p>
+					<p>5.</p>
+					<p>6.</p>
+					<p>7.</p>
+					<p>8.</p>
+					<p>9.</p>
+					<p>10.</p>
+				</div>
+			</div>
+			<div class="shrinkSnake">
+				<div class="shrinkSnakeTitle">Shrink Snake:</div>
+				<div class="shrinkSnakeBody">
+					<p>Get four <span>water</span> or <span>gold</span> squares in a row and snake will get smaller</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="main">
+			<div id="gameInfo">
+				<div class="mainInfo">
+					<span class="levelLabel">Level:</span>
+					<span class="level">1</span>
+					<span class="scoreLabel">Score:</span>
+					<span class="score">0</span>
+				</div>
+				<div class="newGame">New Game</div>
+			</div>
+			<div id="board"></div>
+			<div id="gameGuide">
+				<h2>Rules</h2>
+				<hr>
+				<p>Use arrow keys to change snake's direction.</p>
+				<p>In short: Get all the colors except black.</p>
+				<h2>Details:</h2>
+				<hr>
+				<p><span class="green">Snake is green.</span> <span class="red">Food is red.</span> Eat the food. But don't eat yourself or go off the board!</p>
+				<p>Every 5th piece of food you eat levels you up! Leveling up gives you more points for each piece of food - but you also go faster, so watch out!</p>
+				<p><span class="blue">Water is blue.</span> Drink the water! It gives you double points. You only get water after you level up a couple times - but hurry, it dries up after just a few seconds.</p>
+				<p>If you're extra special you'll get GOLD. <span class="gold">Get that gold!</span> It's worth TRIPLE points and slows you down a little, so it's very valuable - but it disappears fast.</p>
+				<p><span class="green">Shrink Snake:</span> Get four <span class="blue">water</span> or <span class="gold">gold</span> squares in a row (don't miss one!) and your snake will get shorter! A shorter snake will make it easier to navigate without eating yourself.</p>
+				<p><span class="black">Bombs are black.</span> Beware the bombs! Eat one and you explode. Poor snake.</p>
+				<p>Names and scores are only stored on your browser and will erase when you close the page. Don't worry, if your kids are playing no one else will see their names.</p>
+			</div>
+		</div>
+
+	</div>		
+	<footer>
+		<div class="snakeGame">snake game</div>
+		<div class="author">built by datnguyen</div>
+	</footer>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/app.js"></script>	
+</body>
+</html>
