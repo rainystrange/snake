@@ -155,6 +155,7 @@ var controller = {
 		if (model.count == 4) {
 			model.level += 1;
 			view.showLevel(model.level);
+			view.showLevelUp();
 			model.count = 0;
 			model.speed -= 20;
 			clearInterval(controller.runFunction);
@@ -181,17 +182,17 @@ var controller = {
 			view.showSpecialFood("black", food.x, food.y);
 		}
 		else if (n < 80) { // blue
-			model.specialFood.push({x: food.x, y: food.y, kind: "blue", timeLeft: 8});
+			model.specialFood.push({x: food.x, y: food.y, kind: "blue", timeLeft: 6});
 			view.showSpecialFood("blue", food.x, food.y);
 		}
 		else { // gold
-			model.specialFood.push({x: food.x, y: food.y, kind: "gold", timeLeft: 10});
+			model.specialFood.push({x: food.x, y: food.y, kind: "gold", timeLeft: 5});
 			view.showSpecialFood("gold", food.x, food.y);
 		}
 	},
 	lookForFood: function() {
 		var n = Math.floor(Math.random() * 101);
-		if (n < 10) {
+		if (n < 6) {
 			controller.createSpecialFood();
 		}
 		var food;
@@ -202,7 +203,6 @@ var controller = {
 				model.specialFood.splice(i, 1);
 				if (food.kind == "blue" || food.kind == "gold") {
 					model.countSpecialEaten = 0;
-					view.showEaten(model.countSpecialEaten);
 				}
 			}
 			else {
@@ -305,9 +305,16 @@ var view = {
 	},
 	hideSpecialFood: function(kind, x, y) {
 		$(controller.getBoard()[x][y]).removeClass(kind + "Food");
+	},
+	showLevelUp: function() {
+		$('.levelUp').animate( {
+			opacity: 1
+		}, 1000);
+		$('.levelUp').animate( {
+			opacity: 0
+		}, 1000)
 	}
 }
-
 model.init();
 view.init();
 view.showBoard();
