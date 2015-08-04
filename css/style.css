@@ -131,8 +131,9 @@ header div {
 }
 
 #gameInfo {
-	margin-top: 6px;
+	margin-top: 5px;
 	vertical-align: border-bottom;
+	overflow: hidden;
 }
 
 #gameInfo span {
@@ -142,7 +143,7 @@ header div {
 .mainInfo {
 	position: relative;
 	display: inline-block;
-	top: 5px;
+	top: 15px;
 }
 
 .levelLabel, .scoreLabel {
@@ -156,7 +157,8 @@ header div {
 .newGame {
 	height: 34px;
 	width: 100px;
-	margin-left: 50px;
+	float: right;
+	margin-right: 250px;
 	display: inline-block;
 	border-radius: 10px;
 	background-color: #EB960E;
@@ -165,13 +167,18 @@ header div {
 	padding-top: 10px; 
 }
 
+.newGame:hover {
+	opacity: 0.6;
+}
+
 
 
 #board {
+	clear: both;
 	font-size: 0;
 	width: 601px;
 	height: 601px;
-	margin: 5px auto;
+	margin: 6px auto;
 	background-color: white;
 	border-top: 1px solid black;
 	border-left: 1px solid black;
@@ -189,9 +196,31 @@ header div {
 	background-color: green;
 }
 
+.blueFood {
+	background-color: blue;
+}
+
+.blackFood {
+	background-color: black;
+}
+
+.goldFood {
+	background-color: gold;
+}
+
 .snake {
 	background-color: red;
 }
+
+./*snakeTrail {
+	background-image: url(images/snaketrail.jpg);
+	background-repeat: no-repeat;
+}
+
+.snakeHead {
+	background-image: url(images/snakehead.jpg);
+	background-repeat: no-repeat;
+}*/
 
 #gameGuide {
 	margin-top: 20px;
